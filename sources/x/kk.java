@@ -1,0 +1,35 @@
+package x;
+
+/* JADX INFO: loaded from: classes2.dex */
+public final class kk {
+    public final String a;
+    public final String b;
+    public final String c;
+
+    public kk(String str, String str2, String str3) {
+        a51.e(str, "label");
+        a51.e(str2, "url");
+        this.a = str;
+        this.b = str2;
+        this.c = str3;
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof kk)) {
+            return false;
+        }
+        kk kkVar = (kk) obj;
+        return a51.a(this.a, kkVar.a) && a51.a(this.b, kkVar.b) && a51.a(this.c, kkVar.c);
+    }
+
+    public final int hashCode() {
+        return this.c.hashCode() + y1.g(this.a.hashCode() * 31, 31, this.b);
+    }
+
+    public final String toString() {
+        return gh.i(a5.i("BottomTab(label=", this.a, ", url=", this.b, ", icon="), this.c, ")");
+    }
+}

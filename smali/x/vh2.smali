@@ -1,0 +1,16 @@
+###### Class x.vh2 (x.vh2)
+.class public final Lx/vh2;
+.super Lx/j61;
+.source ""
+
+
+# virtual methods
+.method public final x(Ljava/lang/Throwable;)Z
+    .registers 2
+
+    .line 1
+    const/4 p1, 0x0
+
+    .line 2
+    return p1
+.end method

@@ -1,0 +1,54 @@
+<!-- Device-test page for the :template module (developer-controlled ads, 2026-09-16): build
+     :template:assembleFullDebug and drive it over CDP. Never reaches creators: copyTemplateAssets
+     extracts only assets/native-bridge.js from the template APK. -->
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ad Check</title>
+<style>
+body{font:16px system-ui;margin:0;padding:12px;background:#0d1117;color:#e6edf3}
+h1{font-size:18px} button{display:block;width:100%;padding:14px;margin:6px 0;font-size:16px;
+background:#238636;color:#fff;border:0;border-radius:8px}
+.slot{background:#21262d;border:2px dashed #58a6ff;border-radius:8px;min-height:60px;margin:14px 0;
+display:flex;align-items:center;justify-content:center;color:#58a6ff;font-size:13px}
+#mrec{min-height:250px}
+pre{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:8px;font-size:11px;
+white-space:pre-wrap;max-height:260px;overflow:auto}
+.sp{height:420px}
+</style></head><body>
+<h1>AppMintAds device check</h1>
+<pre id="cfg">config: …</pre>
+<button onclick="go('banner')">attach banner slot</button>
+<button onclick="go('mrec')">attach rectangle slot</button>
+<div class="slot" id="banner">banner slot</div>
+<button onclick="p('load','interstitial')">load interstitial</button>
+<button onclick="p('show','interstitial')">show interstitial</button>
+<button onclick="p('show','rewarded')">show rewarded</button>
+<button onclick="p('show','rewarded_interstitial')">show rewarded interstitial</button>
+<button onclick="p('show','app_open')">show app open</button>
+<button onclick="ready()">isReady all</button>
+<button onclick="AppMintAds.banner.detach('slot1');say('detach slot1 called')">detach slot1</button>
+<div class="sp">scroll spacer — the banner above must track the box</div>
+<div class="slot" id="mrec">rectangle slot</div>
+<div class="sp">scroll spacer</div>
+<pre id="log"></pre>
+<script>
+function say(m){var t=new Date().toISOString().slice(11,19)+' '+m;
+ console.log('ADCHECK '+m);var l=document.getElementById('log');l.textContent=t+'\n'+l.textContent;}
+function j(o){try{return JSON.stringify(o)}catch(e){return String(o)}}
+window.addEventListener('appmint:ad',function(e){say('EVENT '+j(e.detail))});
+function p(fn,type){say('call '+fn+'('+type+')');
+ AppMintAds[fn](type).then(function(r){say('RESULT '+fn+' '+type+' '+j(r))});}
+function go(which){var sel=which==='mrec'?'#mrec':'#banner';
+ var opts=which==='mrec'?{size:'medium_rectangle'}:{};
+ say('attach '+which);
+ AppMintAds.banner.attach(sel,opts).then(function(r){say('ATTACH '+which+' '+j(r))});}
+function ready(){['interstitial','rewarded','rewarded_interstitial','app_open']
+ .forEach(function(t){say('isReady '+t+'='+AppMintAds.isReady(t))});}
+window.addEventListener('load',function(){
+ if(!window.AppMintAds){document.getElementById('cfg').textContent='NO AppMintAds SHIM';
+  say('shim missing');return;}
+ document.getElementById('cfg').textContent='config: '+j(AppMintAds.config());
+ say('CONFIG '+j(AppMintAds.config()));
+});
+</script></body></html>

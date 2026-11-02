@@ -1,0 +1,28 @@
+package x;
+
+import java.util.concurrent.Executor;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class p20 extends b81 implements ul0<rp2> {
+
+    /* JADX INFO: renamed from: x, reason: collision with root package name */
+    public final /* synthetic */ q20 f2057x;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public p20(q20 q20Var) {
+        super(0);
+        this.f2057x = q20Var;
+    }
+
+    @Override // x.ul0
+    public final rp2 invoke() {
+        q20 q20Var = this.f2057x;
+        Executor executor = q20Var.g;
+        if (executor != null) {
+            executor.execute(new r5(q20Var, 3));
+            return rp2.a;
+        }
+        a51.j("executor");
+        throw null;
+    }
+}

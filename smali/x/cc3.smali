@@ -1,0 +1,69 @@
+###### Class x.cc3 (x.cc3)
+.class public final Lx/cc3;
+.super Lx/yc3;
+.source ""
+
+
+# instance fields
+.field public final synthetic x:Landroid/content/Intent;
+
+.field public final synthetic y:Landroid/app/Activity;
+
+.field public final synthetic z:I
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Intent;Landroid/app/Activity;I)V
+    .registers 4
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    iput-object p1, p0, Lx/cc3;->x:Landroid/content/Intent;
+
+    .line 5
+    .line 6
+    iput-object p2, p0, Lx/cc3;->y:Landroid/app/Activity;
+
+    .line 7
+    .line 8
+    iput p3, p0, Lx/cc3;->z:I
+
+    .line 9
+    .line 10
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .registers 4
+
+    .line 1
+    iget-object v0, p0, Lx/cc3;->x:Landroid/content/Intent;
+
+    .line 2
+    .line 3
+    if-eqz v0, :cond_b
+
+    .line 4
+    .line 5
+    iget-object v1, p0, Lx/cc3;->y:Landroid/app/Activity;
+
+    .line 6
+    .line 7
+    iget v2, p0, Lx/cc3;->z:I
+
+    .line 8
+    .line 9
+    invoke-virtual {v1, v0, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    .line 10
+    .line 11
+    .line 12
+    :cond_b
+    return-void
+.end method

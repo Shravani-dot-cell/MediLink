@@ -1,0 +1,36 @@
+package x;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class gx7 extends dza implements m4b {
+    private static final gx7 zzb;
+    private int zzd;
+    private int zze;
+    private int zzf;
+
+    static {
+        gx7 gx7Var = new gx7();
+        zzb = gx7Var;
+        dza.l(gx7.class, gx7Var);
+    }
+
+    @Override // x.dza
+    public final Object f(int i) {
+        int i2 = i - 1;
+        if (i2 == 0) {
+            return (byte) 1;
+        }
+        if (i2 == 2) {
+            return new l5b(zzb, "\u0004\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001᠌\u0000\u0002᠌\u0001", new Object[]{"zzd", "zze", h43.E, "zzf", dd1.n0});
+        }
+        if (i2 == 3) {
+            return new gx7();
+        }
+        if (i2 == 4) {
+            return new ov7(zzb);
+        }
+        if (i2 == 5) {
+            return zzb;
+        }
+        throw null;
+    }
+}

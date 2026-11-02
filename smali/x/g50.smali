@@ -1,0 +1,39 @@
+###### Class x.g50 (x.g50)
+.class public interface abstract Lx/g50;
+.super Ljava/lang/Object;
+.source ""
+
+
+# virtual methods
+.method public abstract a()Z
+.end method
+
+.method public abstract b()Z
+.end method
+
+.method public abstract c()Z
+.end method
+
+.method public abstract d(Landroid/view/Menu;Landroidx/appcompat/view/menu/j$a;)V
+.end method
+
+.method public abstract e()Z
+.end method
+
+.method public abstract f()V
+.end method
+
+.method public abstract g()Z
+.end method
+
+.method public abstract h(I)V
+.end method
+
+.method public abstract l()V
+.end method
+
+.method public abstract setWindowCallback(Landroid/view/Window$Callback;)V
+.end method
+
+.method public abstract setWindowTitle(Ljava/lang/CharSequence;)V
+.end method

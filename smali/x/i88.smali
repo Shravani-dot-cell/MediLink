@@ -1,0 +1,448 @@
+###### Class x.i88 (x.i88)
+.class public abstract Lx/i88;
+.super Ljava/util/AbstractCollection;
+.source ""
+
+# interfaces
+.implements Ljava/io/Serializable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<E:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/util/AbstractCollection<",
+        "TE;>;",
+        "Ljava/io/Serializable;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final x:[Ljava/lang/Object;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    new-array v0, v0, [Ljava/lang/Object;
+
+    .line 3
+    .line 4
+    sput-object v0, Lx/i88;->x:[Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .registers 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method public final add(Ljava/lang/Object;)Z
+    .registers 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    .line 2
+    .line 3
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    throw p1
+.end method
+
+.method public final addAll(Ljava/util/Collection;)Z
+    .registers 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    .line 2
+    .line 3
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    throw p1
+.end method
+
+.method public final clear()V
+    .registers 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    .line 2
+    .line 3
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    throw v0
+.end method
+
+.method public abstract contains(Ljava/lang/Object;)Z
+.end method
+
+.method public abstract d()Lx/yp2;
+.end method
+
+.method public e()[Ljava/lang/Object;
+    .registers 2
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    return-object v0
+.end method
+
+.method public f()I
+    .registers 2
+
+    .line 1
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    .line 2
+    .line 3
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    throw v0
+.end method
+
+.method public g()I
+    .registers 2
+
+    .line 1
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    .line 2
+    .line 3
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    throw v0
+.end method
+
+.method public h()Lx/m88;
+    .registers 3
+
+    .line 1
+    invoke-virtual {p0}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    .line 2
+    .line 3
+    .line 4
+    move-result v0
+
+    .line 5
+    if-eqz v0, :cond_b
+
+    .line 6
+    .line 7
+    sget-object v0, Lx/m88;->y:Lx/k88;
+
+    .line 8
+    .line 9
+    sget-object v0, Lx/na8;->B:Lx/na8;
+
+    .line 10
+    .line 11
+    return-object v0
+
+    .line 12
+    :cond_b
+    sget-object v0, Lx/i88;->x:[Ljava/lang/Object;
+
+    .line 13
+    .line 14
+    invoke-virtual {p0, v0}, Lx/i88;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    sget-object v1, Lx/m88;->y:Lx/k88;
+
+    .line 19
+    .line 20
+    array-length v1, v0
+
+    .line 21
+    invoke-static {v1, v0}, Lx/m88;->t(I[Ljava/lang/Object;)Lx/na8;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v0
+
+    .line 25
+    return-object v0
+.end method
+
+.method public abstract i()Z
+.end method
+
+.method public bridge synthetic iterator()Ljava/util/Iterator;
+    .registers 2
+
+    .line 1
+    invoke-virtual {p0}, Lx/i88;->d()Lx/yp2;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object v0
+
+    .line 5
+    return-object v0
+.end method
+
+.method public j(I[Ljava/lang/Object;)I
+    .registers 6
+
+    .line 1
+    invoke-virtual {p0}, Lx/i88;->d()Lx/yp2;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object v0
+
+    .line 5
+    :goto_4
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 6
+    .line 7
+    .line 8
+    move-result v1
+
+    .line 9
+    if-eqz v1, :cond_14
+
+    .line 10
+    .line 11
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v1
+
+    .line 15
+    add-int/lit8 v2, p1, 0x1
+
+    .line 16
+    .line 17
+    aput-object v1, p2, p1
+
+    .line 18
+    .line 19
+    move p1, v2
+
+    .line 20
+    goto :goto_4
+
+    .line 21
+    :cond_14
+    return p1
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .registers 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    .line 2
+    .line 3
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    throw p1
+.end method
+
+.method public final removeAll(Ljava/util/Collection;)Z
+    .registers 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    .line 2
+    .line 3
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    throw p1
+.end method
+
+.method public final retainAll(Ljava/util/Collection;)Z
+    .registers 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    .line 2
+    .line 3
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    throw p1
+.end method
+
+.method public final spliterator()Ljava/util/Spliterator;
+    .registers 2
+
+    .line 1
+    const/16 v0, 0x510
+
+    .line 2
+    .line 3
+    invoke-static {p0, v0}, Ljava/util/Spliterators;->spliterator(Ljava/util/Collection;I)Ljava/util/Spliterator;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    return-object v0
+.end method
+
+.method public final toArray()[Ljava/lang/Object;
+    .registers 2
+
+    .line 1
+    sget-object v0, Lx/i88;->x:[Ljava/lang/Object;
+
+    invoke-virtual {p0, v0}, Lx/i88;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .registers 6
+
+    .line 2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 3
+    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v0
+
+    array-length v1, p1
+
+    const/4 v2, 0x0
+
+    if-ge v1, v0, :cond_2d
+
+    invoke-virtual {p0}, Lx/i88;->e()[Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-nez v3, :cond_1c
+
+    if-eqz v1, :cond_17
+
+    .line 4
+    invoke-static {p1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    .line 5
+    :cond_17
+    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    goto :goto_32
+
+    .line 6
+    :cond_1c
+    invoke-virtual {p0}, Lx/i88;->f()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Lx/i88;->g()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    .line 7
+    invoke-static {v3, v0, v1, p1}, Ljava/util/Arrays;->copyOfRange([Ljava/lang/Object;IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_2d
+    if-le v1, v0, :cond_32
+
+    const/4 v1, 0x0
+
+    .line 8
+    aput-object v1, p1, v0
+
+    .line 9
+    :cond_32
+    :goto_32
+    invoke-virtual {p0, v2, p1}, Lx/i88;->j(I[Ljava/lang/Object;)I
+
+    return-object p1
+.end method

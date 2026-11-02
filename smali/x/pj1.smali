@@ -1,0 +1,34 @@
+###### Class x.pj1 (x.pj1)
+.class public Lx/pj1;
+.super Ljava/lang/Object;
+.source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public x:Ljava/util/HashMap;
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .registers 1
+
+    .line 1
+    return-void
+.end method

@@ -1,0 +1,112 @@
+package x;
+
+import android.annotation.SuppressLint;
+import android.health.connect.datatypes.ActiveCaloriesBurnedRecord;
+import android.health.connect.datatypes.AggregationType;
+import android.health.connect.datatypes.BasalMetabolicRateRecord;
+import android.health.connect.datatypes.BloodPressureRecord;
+import android.health.connect.datatypes.CyclingPedalingCadenceRecord;
+import android.health.connect.datatypes.DistanceRecord;
+import android.health.connect.datatypes.ElevationGainedRecord;
+import android.health.connect.datatypes.ExerciseSessionRecord;
+import android.health.connect.datatypes.FloorsClimbedRecord;
+import android.health.connect.datatypes.HeartRateRecord;
+import android.health.connect.datatypes.HeightRecord;
+import android.health.connect.datatypes.HydrationRecord;
+import android.health.connect.datatypes.NutritionRecord;
+import android.health.connect.datatypes.PowerRecord;
+import android.health.connect.datatypes.RestingHeartRateRecord;
+import android.health.connect.datatypes.SkinTemperatureRecord;
+import android.health.connect.datatypes.SleepSessionRecord;
+import android.health.connect.datatypes.SpeedRecord;
+import android.health.connect.datatypes.StepsCadenceRecord;
+import android.health.connect.datatypes.StepsRecord;
+import android.health.connect.datatypes.TotalCaloriesBurnedRecord;
+import android.health.connect.datatypes.WeightRecord;
+import android.health.connect.datatypes.WheelchairPushesRecord;
+import android.health.connect.datatypes.units.Pressure;
+import android.health.connect.datatypes.units.Velocity;
+import android.health.connect.datatypes.units.Volume;
+import android.os.ext.SdkExtensions;
+import java.util.ArrayList;
+import java.util.Map;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class b5 {
+    public static final Object a;
+    public static final Object b;
+    public static final Object c;
+    public static final Object d;
+    public static final Object e;
+    public static final Object f;
+    public static final Object g;
+    public static final Object h;
+    public static final Map<w3<us1>, AggregationType<Pressure>> i;
+
+    @SuppressLint({"NewApi"})
+    public static final Map<w3<hk2>, AggregationType<?>> j;
+    public static final Map<w3<pr2>, AggregationType<Velocity>> k;
+    public static final Map<w3<xt2>, AggregationType<Volume>> l;
+
+    static {
+        tp1[] tp1VarArr = SdkExtensions.getExtensionVersion(34) >= 10 ? new tp1[]{new tp1(a40.g, CyclingPedalingCadenceRecord.RPM_AVG), new tp1(a40.i, CyclingPedalingCadenceRecord.RPM_MAX), new tp1(a40.h, CyclingPedalingCadenceRecord.RPM_MIN), new tp1(pg2.g, StepsCadenceRecord.STEPS_CADENCE_RATE_AVG), new tp1(pg2.i, StepsCadenceRecord.STEPS_CADENCE_RATE_MAX), new tp1(pg2.h, StepsCadenceRecord.STEPS_CADENCE_RATE_MIN)} : new tp1[0];
+        kw kwVar = new kw(2);
+        ArrayList arrayList = (ArrayList) kwVar.y;
+        a5.m(ai0.g, FloorsClimbedRecord.FLOORS_CLIMBED_TOTAL, kwVar);
+        kwVar.f(tp1VarArr);
+        a = de1.H((tp1[]) arrayList.toArray(new tp1[arrayList.size()]));
+        b = de1.H(new tp1(re0.m, ExerciseSessionRecord.EXERCISE_DURATION_TOTAL), new tp1(ee2.i, SleepSessionRecord.SLEEP_DURATION_TOTAL));
+        c = de1.H(new tp1(z1.h, ActiveCaloriesBurnedRecord.ACTIVE_CALORIES_TOTAL), new tp1(jh.f, BasalMetabolicRateRecord.BASAL_CALORIES_TOTAL), new tp1(hm1.f0, NutritionRecord.ENERGY_TOTAL), new tp1(hm1.g0, NutritionRecord.ENERGY_FROM_FAT_TOTAL), new tp1(kn2.h, TotalCaloriesBurnedRecord.ENERGY_TOTAL));
+        d = de1.H(new tp1(u90.h, DistanceRecord.DISTANCE_TOTAL), new tp1(nb0.i, ElevationGainedRecord.ELEVATION_GAINED_TOTAL), new tp1(ls0.f, HeightRecord.HEIGHT_AVG), new tp1(ls0.g, HeightRecord.HEIGHT_MIN), new tp1(ls0.h, HeightRecord.HEIGHT_MAX));
+        e = de1.H(new tp1(js0.g, HeartRateRecord.BPM_AVG), new tp1(js0.h, HeartRateRecord.BPM_MIN), new tp1(js0.i, HeartRateRecord.BPM_MAX), new tp1(js0.j, HeartRateRecord.HEART_MEASUREMENTS_COUNT), new tp1(z32.e, RestingHeartRateRecord.BPM_AVG), new tp1(z32.f, RestingHeartRateRecord.BPM_MIN), new tp1(z32.g, RestingHeartRateRecord.BPM_MAX), new tp1(qg2.g, StepsRecord.STEPS_COUNT_TOTAL), new tp1(u23.g, WheelchairPushesRecord.WHEEL_CHAIR_PUSHES_COUNT_TOTAL));
+        kw kwVar2 = new kw(40);
+        ArrayList arrayList2 = (ArrayList) kwVar2.y;
+        a5.m(hm1.c0, NutritionRecord.BIOTIN_TOTAL, kwVar2);
+        a5.m(hm1.d0, NutritionRecord.CAFFEINE_TOTAL, kwVar2);
+        a5.m(hm1.e0, NutritionRecord.CALCIUM_TOTAL, kwVar2);
+        a5.m(hm1.h0, NutritionRecord.CHLORIDE_TOTAL, kwVar2);
+        a5.m(hm1.i0, NutritionRecord.CHOLESTEROL_TOTAL, kwVar2);
+        a5.m(hm1.j0, NutritionRecord.CHROMIUM_TOTAL, kwVar2);
+        a5.m(hm1.k0, NutritionRecord.COPPER_TOTAL, kwVar2);
+        a5.m(hm1.l0, NutritionRecord.DIETARY_FIBER_TOTAL, kwVar2);
+        a5.m(hm1.m0, NutritionRecord.FOLATE_TOTAL, kwVar2);
+        a5.m(hm1.n0, NutritionRecord.FOLIC_ACID_TOTAL, kwVar2);
+        a5.m(hm1.o0, NutritionRecord.IODINE_TOTAL, kwVar2);
+        a5.m(hm1.p0, NutritionRecord.IRON_TOTAL, kwVar2);
+        a5.m(hm1.q0, NutritionRecord.MAGNESIUM_TOTAL, kwVar2);
+        a5.m(hm1.r0, NutritionRecord.MANGANESE_TOTAL, kwVar2);
+        a5.m(hm1.s0, NutritionRecord.MOLYBDENUM_TOTAL, kwVar2);
+        a5.m(hm1.t0, NutritionRecord.MONOUNSATURATED_FAT_TOTAL, kwVar2);
+        a5.m(hm1.u0, NutritionRecord.NIACIN_TOTAL, kwVar2);
+        a5.m(hm1.v0, NutritionRecord.PANTOTHENIC_ACID_TOTAL, kwVar2);
+        a5.m(hm1.w0, NutritionRecord.PHOSPHORUS_TOTAL, kwVar2);
+        a5.m(hm1.x0, NutritionRecord.POLYUNSATURATED_FAT_TOTAL, kwVar2);
+        a5.m(hm1.y0, NutritionRecord.POTASSIUM_TOTAL, kwVar2);
+        a5.m(hm1.z0, NutritionRecord.PROTEIN_TOTAL, kwVar2);
+        a5.m(hm1.A0, NutritionRecord.RIBOFLAVIN_TOTAL, kwVar2);
+        a5.m(hm1.B0, NutritionRecord.SATURATED_FAT_TOTAL, kwVar2);
+        a5.m(hm1.C0, NutritionRecord.SELENIUM_TOTAL, kwVar2);
+        a5.m(hm1.D0, NutritionRecord.SODIUM_TOTAL, kwVar2);
+        a5.m(hm1.E0, NutritionRecord.SUGAR_TOTAL, kwVar2);
+        a5.m(hm1.F0, NutritionRecord.THIAMIN_TOTAL, kwVar2);
+        a5.m(hm1.G0, NutritionRecord.TOTAL_CARBOHYDRATE_TOTAL, kwVar2);
+        a5.m(hm1.H0, NutritionRecord.TOTAL_FAT_TOTAL, kwVar2);
+        a5.m(hm1.J0, NutritionRecord.UNSATURATED_FAT_TOTAL, kwVar2);
+        a5.m(hm1.K0, NutritionRecord.VITAMIN_A_TOTAL, kwVar2);
+        a5.m(hm1.L0, NutritionRecord.VITAMIN_B12_TOTAL, kwVar2);
+        a5.m(hm1.M0, NutritionRecord.VITAMIN_B6_TOTAL, kwVar2);
+        a5.m(hm1.N0, NutritionRecord.VITAMIN_C_TOTAL, kwVar2);
+        a5.m(hm1.O0, NutritionRecord.VITAMIN_D_TOTAL, kwVar2);
+        a5.m(hm1.P0, NutritionRecord.VITAMIN_E_TOTAL, kwVar2);
+        a5.m(hm1.Q0, NutritionRecord.VITAMIN_K_TOTAL, kwVar2);
+        kwVar2.a(new tp1(hm1.R0, NutritionRecord.ZINC_TOTAL));
+        kwVar2.f(SdkExtensions.getExtensionVersion(34) >= 10 ? new tp1[]{new tp1(hm1.I0, NutritionRecord.TRANS_FAT_TOTAL)} : new tp1[0]);
+        f = de1.H((tp1[]) arrayList2.toArray(new tp1[arrayList2.size()]));
+        g = de1.H(new tp1(r23.f, WeightRecord.WEIGHT_AVG), new tp1(r23.g, WeightRecord.WEIGHT_MIN), new tp1(r23.h, WeightRecord.WEIGHT_MAX));
+        h = de1.H(new tp1(hs1.h, PowerRecord.POWER_AVG), new tp1(hs1.j, PowerRecord.POWER_MAX), new tp1(hs1.i, PowerRecord.POWER_MIN));
+        i = de1.O(SdkExtensions.getExtensionVersion(34) >= 10 ? new tp1[]{new tp1(qj.s, BloodPressureRecord.DIASTOLIC_AVG), new tp1(qj.u, BloodPressureRecord.DIASTOLIC_MAX), new tp1(qj.t, BloodPressureRecord.DIASTOLIC_MIN), new tp1(qj.p, BloodPressureRecord.SYSTOLIC_AVG), new tp1(qj.r, BloodPressureRecord.SYSTOLIC_MAX), new tp1(qj.q, BloodPressureRecord.SYSTOLIC_MIN)} : new tp1[0]);
+        j = de1.O(SdkExtensions.getExtensionVersion(34) >= 13 ? new tp1[]{new tp1(de2.k, SkinTemperatureRecord.SKIN_TEMPERATURE_DELTA_AVG), new tp1(de2.m, SkinTemperatureRecord.SKIN_TEMPERATURE_DELTA_MAX), new tp1(de2.l, SkinTemperatureRecord.SKIN_TEMPERATURE_DELTA_MIN)} : new tp1[0]);
+        k = de1.O(SdkExtensions.getExtensionVersion(34) >= 10 ? new tp1[]{new tp1(ze2.h, SpeedRecord.SPEED_AVG), new tp1(ze2.j, SpeedRecord.SPEED_MAX), new tp1(ze2.i, SpeedRecord.SPEED_MIN)} : new tp1[0]);
+        l = ce1.D(new tp1(mu0.h, HydrationRecord.VOLUME_TOTAL));
+    }
+}

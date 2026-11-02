@@ -1,0 +1,1316 @@
+###### Class x.ze2 (x.ze2)
+.class public final Lx/ze2;
+.super Ljava/lang/Object;
+.source ""
+
+# interfaces
+.implements Lx/ra2;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lx/ze2$d;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lx/ra2<",
+        "Lx/ze2$d;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final g:Lx/pr2;
+
+.field public static final h:Lx/w3;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lx/w3<",
+            "Lx/pr2;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final i:Lx/w3;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lx/w3<",
+            "Lx/pr2;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final j:Lx/w3;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lx/w3<",
+            "Lx/pr2;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final a:Ljava/time/Instant;
+
+.field public final b:Ljava/time/ZoneOffset;
+
+.field public final c:Ljava/time/Instant;
+
+.field public final d:Ljava/time/ZoneOffset;
+
+.field public final e:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lx/ze2$d;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public final f:Lx/ih1;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 10
+
+    .line 1
+    const v0, 0xf4240
+
+    .line 2
+    .line 3
+    .line 4
+    int-to-double v0, v0
+
+    .line 5
+    sget-object v4, Lx/pr2;->z:Lx/pr2$a;
+
+    .line 6
+    .line 7
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 8
+    .line 9
+    .line 10
+    invoke-static {v0, v1}, Lx/pr2$a;->a(D)Lx/pr2;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    sput-object v0, Lx/ze2;->g:Lx/pr2;
+
+    .line 15
+    .line 16
+    sget-object v0, Lx/w3$a;->z:Lx/w3$a;
+
+    .line 17
+    .line 18
+    new-instance v2, Lx/ze2$a;
+
+    .line 19
+    .line 20
+    const-string v7, "metersPerSecond(D)Landroidx/health/connect/client/units/Velocity;"
+
+    .line 21
+    .line 22
+    const/4 v8, 0x0
+
+    .line 23
+    const/4 v3, 0x1
+
+    .line 24
+    const-class v5, Lx/pr2$a;
+
+    .line 25
+    .line 26
+    const-string v6, "metersPerSecond"
+
+    .line 27
+    .line 28
+    invoke-direct/range {v2 .. v8}, Lx/vm0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    .line 29
+    .line 30
+    .line 31
+    const-string v1, "SpeedSeries"
+
+    .line 32
+    .line 33
+    const-string v9, "speed"
+
+    .line 34
+    .line 35
+    invoke-static {v1, v0, v9, v2}, Lx/w3$b;->b(Ljava/lang/String;Lx/w3$a;Ljava/lang/String;Lx/wl0;)Lx/w3;
+
+    .line 36
+    .line 37
+    .line 38
+    move-result-object v0
+
+    .line 39
+    sput-object v0, Lx/ze2;->h:Lx/w3;
+
+    .line 40
+    .line 41
+    sget-object v0, Lx/w3$a;->A:Lx/w3$a;
+
+    .line 42
+    .line 43
+    new-instance v2, Lx/ze2$c;
+
+    .line 44
+    .line 45
+    const-string v7, "metersPerSecond(D)Landroidx/health/connect/client/units/Velocity;"
+
+    .line 46
+    .line 47
+    const-class v5, Lx/pr2$a;
+
+    .line 48
+    .line 49
+    const-string v6, "metersPerSecond"
+
+    .line 50
+    .line 51
+    invoke-direct/range {v2 .. v8}, Lx/vm0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    .line 52
+    .line 53
+    .line 54
+    invoke-static {v1, v0, v9, v2}, Lx/w3$b;->b(Ljava/lang/String;Lx/w3$a;Ljava/lang/String;Lx/wl0;)Lx/w3;
+
+    .line 55
+    .line 56
+    .line 57
+    move-result-object v0
+
+    .line 58
+    sput-object v0, Lx/ze2;->i:Lx/w3;
+
+    .line 59
+    .line 60
+    sget-object v0, Lx/w3$a;->B:Lx/w3$a;
+
+    .line 61
+    .line 62
+    new-instance v2, Lx/ze2$b;
+
+    .line 63
+    .line 64
+    const-string v7, "metersPerSecond(D)Landroidx/health/connect/client/units/Velocity;"
+
+    .line 65
+    .line 66
+    const-class v5, Lx/pr2$a;
+
+    .line 67
+    .line 68
+    const-string v6, "metersPerSecond"
+
+    .line 69
+    .line 70
+    invoke-direct/range {v2 .. v8}, Lx/vm0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    .line 71
+    .line 72
+    .line 73
+    invoke-static {v1, v0, v9, v2}, Lx/w3$b;->b(Ljava/lang/String;Lx/w3$a;Ljava/lang/String;Lx/wl0;)Lx/w3;
+
+    .line 74
+    .line 75
+    .line 76
+    move-result-object v0
+
+    .line 77
+    sput-object v0, Lx/ze2;->j:Lx/w3;
+
+    .line 78
+    .line 79
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/time/Instant;Ljava/time/ZoneOffset;Ljava/time/Instant;Ljava/time/ZoneOffset;Ljava/util/List;Lx/ih1;)V
+    .registers 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/time/Instant;",
+            "Ljava/time/ZoneOffset;",
+            "Ljava/time/Instant;",
+            "Ljava/time/ZoneOffset;",
+            "Ljava/util/List<",
+            "Lx/ze2$d;",
+            ">;",
+            "Lx/ih1;",
+            ")V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    iput-object p1, p0, Lx/ze2;->a:Ljava/time/Instant;
+
+    .line 5
+    .line 6
+    iput-object p2, p0, Lx/ze2;->b:Ljava/time/ZoneOffset;
+
+    .line 7
+    .line 8
+    iput-object p3, p0, Lx/ze2;->c:Ljava/time/Instant;
+
+    .line 9
+    .line 10
+    iput-object p4, p0, Lx/ze2;->d:Ljava/time/ZoneOffset;
+
+    .line 11
+    .line 12
+    iput-object p5, p0, Lx/ze2;->e:Ljava/util/List;
+
+    .line 13
+    .line 14
+    iput-object p6, p0, Lx/ze2;->f:Lx/ih1;
+
+    .line 15
+    .line 16
+    invoke-static {p1, p3}, Lx/n5;->x(Ljava/time/Instant;Ljava/time/Instant;)Z
+
+    .line 17
+    .line 18
+    .line 19
+    move-result p1
+
+    .line 20
+    if-nez p1, :cond_16
+
+    .line 21
+    .line 22
+    return-void
+
+    .line 23
+    :cond_16
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    .line 24
+    .line 25
+    const-string p2, "startTime must not be after endTime."
+
+    .line 26
+    .line 27
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 28
+    .line 29
+    .line 30
+    throw p1
+.end method
+
+
+# virtual methods
+.method public final b()Ljava/util/List;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lx/ze2$d;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lx/ze2;->e:Ljava/util/List;
+
+    .line 2
+    .line 3
+    return-object v0
+.end method
+
+.method public final c()Ljava/time/ZoneOffset;
+    .registers 2
+
+    .line 1
+    iget-object v0, p0, Lx/ze2;->b:Ljava/time/ZoneOffset;
+
+    .line 2
+    .line 3
+    return-object v0
+.end method
+
+.method public final e()Ljava/time/Instant;
+    .registers 2
+
+    .line 1
+    iget-object v0, p0, Lx/ze2;->c:Ljava/time/Instant;
+
+    .line 2
+    .line 3
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .registers 6
+
+    .line 1
+    const/4 v0, 0x1
+
+    .line 2
+    if-ne p0, p1, :cond_4
+
+    .line 3
+    .line 4
+    return v0
+
+    .line 5
+    :cond_4
+    instance-of v1, p1, Lx/ze2;
+
+    .line 6
+    .line 7
+    const/4 v2, 0x0
+
+    .line 8
+    if-nez v1, :cond_a
+
+    .line 9
+    .line 10
+    return v2
+
+    .line 11
+    :cond_a
+    iget-object v1, p0, Lx/ze2;->a:Ljava/time/Instant;
+
+    .line 12
+    .line 13
+    check-cast p1, Lx/ze2;
+
+    .line 14
+    .line 15
+    iget-object v3, p1, Lx/ze2;->a:Ljava/time/Instant;
+
+    .line 16
+    .line 17
+    invoke-static {v1, v3}, Lx/a51;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 18
+    .line 19
+    .line 20
+    move-result v1
+
+    .line 21
+    if-nez v1, :cond_17
+
+    .line 22
+    .line 23
+    return v2
+
+    .line 24
+    :cond_17
+    iget-object v1, p0, Lx/ze2;->b:Ljava/time/ZoneOffset;
+
+    .line 25
+    .line 26
+    iget-object v3, p1, Lx/ze2;->b:Ljava/time/ZoneOffset;
+
+    .line 27
+    .line 28
+    invoke-static {v1, v3}, Lx/a51;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 29
+    .line 30
+    .line 31
+    move-result v1
+
+    .line 32
+    if-nez v1, :cond_22
+
+    .line 33
+    .line 34
+    return v2
+
+    .line 35
+    :cond_22
+    iget-object v1, p0, Lx/ze2;->c:Ljava/time/Instant;
+
+    .line 36
+    .line 37
+    iget-object v3, p1, Lx/ze2;->c:Ljava/time/Instant;
+
+    .line 38
+    .line 39
+    invoke-static {v1, v3}, Lx/a51;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 40
+    .line 41
+    .line 42
+    move-result v1
+
+    .line 43
+    if-nez v1, :cond_2d
+
+    .line 44
+    .line 45
+    return v2
+
+    .line 46
+    :cond_2d
+    iget-object v1, p0, Lx/ze2;->d:Ljava/time/ZoneOffset;
+
+    .line 47
+    .line 48
+    iget-object v3, p1, Lx/ze2;->d:Ljava/time/ZoneOffset;
+
+    .line 49
+    .line 50
+    invoke-static {v1, v3}, Lx/a51;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 51
+    .line 52
+    .line 53
+    move-result v1
+
+    .line 54
+    if-nez v1, :cond_38
+
+    .line 55
+    .line 56
+    return v2
+
+    .line 57
+    :cond_38
+    iget-object v1, p0, Lx/ze2;->e:Ljava/util/List;
+
+    .line 58
+    .line 59
+    iget-object v3, p1, Lx/ze2;->e:Ljava/util/List;
+
+    .line 60
+    .line 61
+    invoke-static {v1, v3}, Lx/a51;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 62
+    .line 63
+    .line 64
+    move-result v1
+
+    .line 65
+    if-nez v1, :cond_43
+
+    .line 66
+    .line 67
+    return v2
+
+    .line 68
+    :cond_43
+    iget-object v1, p0, Lx/ze2;->f:Lx/ih1;
+
+    .line 69
+    .line 70
+    iget-object p1, p1, Lx/ze2;->f:Lx/ih1;
+
+    .line 71
+    .line 72
+    invoke-static {v1, p1}, Lx/a51;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 73
+    .line 74
+    .line 75
+    move-result p1
+
+    .line 76
+    if-nez p1, :cond_4e
+
+    .line 77
+    .line 78
+    return v2
+
+    .line 79
+    :cond_4e
+    return v0
+.end method
+
+.method public final f()Ljava/time/ZoneOffset;
+    .registers 2
+
+    .line 1
+    iget-object v0, p0, Lx/ze2;->d:Ljava/time/ZoneOffset;
+
+    .line 2
+    .line 3
+    return-object v0
+.end method
+
+.method public final getMetadata()Lx/ih1;
+    .registers 2
+
+    .line 1
+    iget-object v0, p0, Lx/ze2;->f:Lx/ih1;
+
+    .line 2
+    .line 3
+    return-object v0
+.end method
+
+.method public final getStartTime()Ljava/time/Instant;
+    .registers 2
+
+    .line 1
+    iget-object v0, p0, Lx/ze2;->a:Ljava/time/Instant;
+
+    .line 2
+    .line 3
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .registers 5
+
+    .line 1
+    iget-object v0, p0, Lx/ze2;->a:Ljava/time/Instant;
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lx/n5;->a(Ljava/time/Instant;)I
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    const/16 v1, 0x1f
+
+    .line 8
+    .line 9
+    mul-int/2addr v0, v1
+
+    .line 10
+    iget-object v2, p0, Lx/ze2;->b:Ljava/time/ZoneOffset;
+
+    .line 11
+    .line 12
+    const/4 v3, 0x0
+
+    .line 13
+    if-eqz v2, :cond_13
+
+    .line 14
+    .line 15
+    invoke-static {v2}, Lx/x1;->b(Ljava/time/ZoneOffset;)I
+
+    .line 16
+    .line 17
+    .line 18
+    move-result v2
+
+    .line 19
+    goto :goto_14
+
+    .line 20
+    :cond_13
+    move v2, v3
+
+    .line 21
+    :goto_14
+    add-int/2addr v0, v2
+
+    .line 22
+    mul-int/2addr v0, v1
+
+    .line 23
+    iget-object v2, p0, Lx/ze2;->c:Ljava/time/Instant;
+
+    .line 24
+    .line 25
+    invoke-static {v2}, Lx/n5;->a(Ljava/time/Instant;)I
+
+    .line 26
+    .line 27
+    .line 28
+    move-result v2
+
+    .line 29
+    add-int/2addr v2, v0
+
+    .line 30
+    mul-int/2addr v2, v1
+
+    .line 31
+    iget-object v0, p0, Lx/ze2;->d:Ljava/time/ZoneOffset;
+
+    .line 32
+    .line 33
+    if-eqz v0, :cond_26
+
+    .line 34
+    .line 35
+    invoke-static {v0}, Lx/x1;->b(Ljava/time/ZoneOffset;)I
+
+    .line 36
+    .line 37
+    .line 38
+    move-result v3
+
+    .line 39
+    :cond_26
+    add-int/2addr v2, v3
+
+    .line 40
+    mul-int/2addr v2, v1
+
+    .line 41
+    iget-object v0, p0, Lx/ze2;->e:Ljava/util/List;
+
+    .line 42
+    .line 43
+    invoke-static {v2, v1, v0}, Lx/vb;->e(IILjava/util/List;)I
+
+    .line 44
+    .line 45
+    .line 46
+    move-result v0
+
+    .line 47
+    iget-object v1, p0, Lx/ze2;->f:Lx/ih1;
+
+    .line 48
+    .line 49
+    invoke-virtual {v1}, Lx/ih1;->hashCode()I
+
+    .line 50
+    .line 51
+    .line 52
+    move-result v1
+
+    .line 53
+    add-int/2addr v1, v0
+
+    .line 54
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .registers 4
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 2
+    .line 3
+    const-string v1, "SpeedRecord(startTime="
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 6
+    .line 7
+    .line 8
+    iget-object v1, p0, Lx/ze2;->a:Ljava/time/Instant;
+
+    .line 9
+    .line 10
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 11
+    .line 12
+    .line 13
+    const-string v1, ", startZoneOffset="
+
+    .line 14
+    .line 15
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 16
+    .line 17
+    .line 18
+    iget-object v1, p0, Lx/ze2;->b:Ljava/time/ZoneOffset;
+
+    .line 19
+    .line 20
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 21
+    .line 22
+    .line 23
+    const-string v1, ", endTime="
+
+    .line 24
+    .line 25
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 26
+    .line 27
+    .line 28
+    iget-object v1, p0, Lx/ze2;->c:Ljava/time/Instant;
+
+    .line 29
+    .line 30
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 31
+    .line 32
+    .line 33
+    const-string v1, ", endZoneOffset="
+
+    .line 34
+    .line 35
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 36
+    .line 37
+    .line 38
+    iget-object v1, p0, Lx/ze2;->d:Ljava/time/ZoneOffset;
+
+    .line 39
+    .line 40
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 41
+    .line 42
+    .line 43
+    const-string v1, ", samples="
+
+    .line 44
+    .line 45
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 46
+    .line 47
+    .line 48
+    iget-object v1, p0, Lx/ze2;->e:Ljava/util/List;
+
+    .line 49
+    .line 50
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 51
+    .line 52
+    .line 53
+    const-string v1, ", metadata="
+
+    .line 54
+    .line 55
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 56
+    .line 57
+    .line 58
+    iget-object v1, p0, Lx/ze2;->f:Lx/ih1;
+
+    .line 59
+    .line 60
+    const/16 v2, 0x29
+
+    .line 61
+    .line 62
+    invoke-static {v0, v1, v2}, Lx/y1;->i(Ljava/lang/StringBuilder;Lx/ih1;C)Ljava/lang/String;
+
+    .line 63
+    .line 64
+    .line 65
+    move-result-object v0
+
+    .line 66
+    return-object v0
+.end method
+
+###### Class x.ze2.a (x.ze2$a)
+.class public final synthetic Lx/ze2$a;
+.super Lx/vm0;
+.source ""
+
+# interfaces
+.implements Lx/wl0;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lx/ze2;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1001
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lx/vm0;",
+        "Lx/wl0<",
+        "Ljava/lang/Double;",
+        "Lx/pr2;",
+        ">;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 4
+
+    .line 1
+    check-cast p1, Ljava/lang/Number;
+
+    .line 2
+    .line 3
+    invoke-virtual {p1}, Ljava/lang/Number;->doubleValue()D
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-wide v0
+
+    .line 7
+    iget-object p1, p0, Lx/tn;->receiver:Ljava/lang/Object;
+
+    .line 8
+    .line 9
+    check-cast p1, Lx/pr2$a;
+
+    .line 10
+    .line 11
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 12
+    .line 13
+    .line 14
+    invoke-static {v0, v1}, Lx/pr2$a;->a(D)Lx/pr2;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object p1
+
+    .line 18
+    return-object p1
+.end method
+
+###### Class x.ze2.b (x.ze2$b)
+.class public final synthetic Lx/ze2$b;
+.super Lx/vm0;
+.source ""
+
+# interfaces
+.implements Lx/wl0;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lx/ze2;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1001
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lx/vm0;",
+        "Lx/wl0<",
+        "Ljava/lang/Double;",
+        "Lx/pr2;",
+        ">;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 4
+
+    .line 1
+    check-cast p1, Ljava/lang/Number;
+
+    .line 2
+    .line 3
+    invoke-virtual {p1}, Ljava/lang/Number;->doubleValue()D
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-wide v0
+
+    .line 7
+    iget-object p1, p0, Lx/tn;->receiver:Ljava/lang/Object;
+
+    .line 8
+    .line 9
+    check-cast p1, Lx/pr2$a;
+
+    .line 10
+    .line 11
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 12
+    .line 13
+    .line 14
+    invoke-static {v0, v1}, Lx/pr2$a;->a(D)Lx/pr2;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object p1
+
+    .line 18
+    return-object p1
+.end method
+
+###### Class x.ze2.c (x.ze2$c)
+.class public final synthetic Lx/ze2$c;
+.super Lx/vm0;
+.source ""
+
+# interfaces
+.implements Lx/wl0;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lx/ze2;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1001
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lx/vm0;",
+        "Lx/wl0<",
+        "Ljava/lang/Double;",
+        "Lx/pr2;",
+        ">;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 4
+
+    .line 1
+    check-cast p1, Ljava/lang/Number;
+
+    .line 2
+    .line 3
+    invoke-virtual {p1}, Ljava/lang/Number;->doubleValue()D
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-wide v0
+
+    .line 7
+    iget-object p1, p0, Lx/tn;->receiver:Ljava/lang/Object;
+
+    .line 8
+    .line 9
+    check-cast p1, Lx/pr2$a;
+
+    .line 10
+    .line 11
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 12
+    .line 13
+    .line 14
+    invoke-static {v0, v1}, Lx/pr2$a;->a(D)Lx/pr2;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object p1
+
+    .line 18
+    return-object p1
+.end method
+
+###### Class x.ze2.d (x.ze2$d)
+.class public final Lx/ze2$d;
+.super Ljava/lang/Object;
+.source ""
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lx/ze2;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "d"
+.end annotation
+
+
+# instance fields
+.field public final a:Ljava/time/Instant;
+
+.field public final b:Lx/pr2;
+
+
+# direct methods
+.method public constructor <init>(Ljava/time/Instant;Lx/pr2;)V
+    .registers 4
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    iput-object p1, p0, Lx/ze2$d;->a:Ljava/time/Instant;
+
+    .line 5
+    .line 6
+    iput-object p2, p0, Lx/ze2$d;->b:Lx/pr2;
+
+    .line 7
+    .line 8
+    sget-object p1, Lx/pr2;->A:Ljava/util/LinkedHashMap;
+
+    .line 9
+    .line 10
+    iget-object v0, p2, Lx/pr2;->y:Lx/pr2$b;
+
+    .line 11
+    .line 12
+    invoke-static {v0, p1}, Lx/de1;->F(Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/Object;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object p1
+
+    .line 16
+    check-cast p1, Lx/pr2;
+
+    .line 17
+    .line 18
+    const-string v0, "speed"
+
+    .line 19
+    .line 20
+    invoke-static {p2, p1, v0}, Lx/er2;->e(Ljava/lang/Comparable;Ljava/lang/Comparable;Ljava/lang/String;)V
+
+    .line 21
+    .line 22
+    .line 23
+    sget-object p1, Lx/ze2;->g:Lx/pr2;
+
+    .line 24
+    .line 25
+    invoke-static {p2, p1, v0}, Lx/er2;->f(Ljava/lang/Comparable;Ljava/lang/Comparable;Ljava/lang/String;)V
+
+    .line 26
+    .line 27
+    .line 28
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .registers 6
+
+    .line 1
+    const/4 v0, 0x1
+
+    .line 2
+    if-ne p0, p1, :cond_4
+
+    .line 3
+    .line 4
+    return v0
+
+    .line 5
+    :cond_4
+    instance-of v1, p1, Lx/ze2$d;
+
+    .line 6
+    .line 7
+    const/4 v2, 0x0
+
+    .line 8
+    if-nez v1, :cond_a
+
+    .line 9
+    .line 10
+    return v2
+
+    .line 11
+    :cond_a
+    iget-object v1, p0, Lx/ze2$d;->a:Ljava/time/Instant;
+
+    .line 12
+    .line 13
+    check-cast p1, Lx/ze2$d;
+
+    .line 14
+    .line 15
+    iget-object v3, p1, Lx/ze2$d;->a:Ljava/time/Instant;
+
+    .line 16
+    .line 17
+    invoke-static {v1, v3}, Lx/a51;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 18
+    .line 19
+    .line 20
+    move-result v1
+
+    .line 21
+    if-nez v1, :cond_17
+
+    .line 22
+    .line 23
+    return v2
+
+    .line 24
+    :cond_17
+    iget-object v1, p0, Lx/ze2$d;->b:Lx/pr2;
+
+    .line 25
+    .line 26
+    iget-object p1, p1, Lx/ze2$d;->b:Lx/pr2;
+
+    .line 27
+    .line 28
+    invoke-static {v1, p1}, Lx/a51;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 29
+    .line 30
+    .line 31
+    move-result p1
+
+    .line 32
+    if-nez p1, :cond_22
+
+    .line 33
+    .line 34
+    return v2
+
+    .line 35
+    :cond_22
+    return v0
+.end method
+
+.method public final hashCode()I
+    .registers 3
+
+    .line 1
+    iget-object v0, p0, Lx/ze2$d;->a:Ljava/time/Instant;
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lx/n5;->a(Ljava/time/Instant;)I
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    mul-int/lit8 v0, v0, 0x1f
+
+    .line 8
+    .line 9
+    iget-object v1, p0, Lx/ze2$d;->b:Lx/pr2;
+
+    .line 10
+    .line 11
+    invoke-virtual {v1}, Lx/pr2;->hashCode()I
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v1
+
+    .line 15
+    add-int/2addr v1, v0
+
+    .line 16
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .registers 3
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 2
+    .line 3
+    const-string v1, "Sample(time="
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 6
+    .line 7
+    .line 8
+    iget-object v1, p0, Lx/ze2$d;->a:Ljava/time/Instant;
+
+    .line 9
+    .line 10
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 11
+    .line 12
+    .line 13
+    const-string v1, ", speed="
+
+    .line 14
+    .line 15
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 16
+    .line 17
+    .line 18
+    iget-object v1, p0, Lx/ze2$d;->b:Lx/pr2;
+
+    .line 19
+    .line 20
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 21
+    .line 22
+    .line 23
+    const/16 v1, 0x29
+
+    .line 24
+    .line 25
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 26
+    .line 27
+    .line 28
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object v0
+
+    .line 32
+    return-object v0
+.end method

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Resource-shrinker keep list (consumed by AGP when `shrinkResources true`).
+
+  WHY THIS FILE EXISTS
+  The Google Mobile Ads SDK (com.google.android.gms:play-services-ads) ships
+  res/xml/gma_ad_services_config.xml and references it ONLY through a manifest property the
+  SDK injects into the merged manifest:
+      <property android:name="android.adservices.AD_SERVICES_CONFIG"
+                android:resource="@xml/gma_ad_services_config" />
+  AGP's resource shrinker does NOT treat a manifest <property android:resource=...> as a use of
+  the resource, so it strips the resource-table entry for @xml/gma_ad_services_config while the
+  file itself still ships inside the .aab. Google Play Console then rejects the upload:
+      "Module 'base' contains resource files that are not referenced from the resource table:
+       res/xml/gma_ad_services_config.xml"
+  (bundletool build-apks validation). Keeping the entry here restores file/table consistency so
+  every generated .aab uploads cleanly.
+
+  If a mediation adapter later adds another *_ad_services_config.xml with the same
+  manifest-property-only reference and triggers the same rejection, add it to tools:keep too.
+
+  THE ADAPTIVE ICON PIECES are pinned for a related-but-different reason. @mipmap/ic_launcher_fg
+  and @color/ic_launcher_bg are referenced ONLY from mipmap-anydpi-v26/ic_launcher{,_round}.xml,
+  and the generated app's launcher icon is the one resource the shrinker cannot see being used —
+  AppMint writes the manifest itself, so no source in this module points at it. If either got
+  stripped, generated apps would fall back to the legacy bitmap and the white launcher frame this
+  adaptive icon exists to remove would silently come back.
+
+  THE ALTERNATE ICON SLOTS (ic_launcher_alt1..4, their _fg layers and _bg colours, 2026-09-30) are
+  pinned for the same reason: only the generated manifest's launcher <activity-alias> entries point
+  at them (AppIconSwitcher), and the generator fills them per build. Their ids are resolved by name
+  (TemplateResourceIds.altIcons), so a stripped slot would fail the app build, not ship a dead icon.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@xml/gma_ad_services_config,@string/google_app_id,@xml/appwright_widget_info,@layout/appwright_widget,@layout/appwright_widget_preview,@layout/appwright_widget_rich,@drawable/appmint_tv_banner,@mipmap/ic_launcher,@mipmap/ic_launcher_round,@mipmap/ic_launcher_fg,@color/ic_launcher_bg,@mipmap/ic_launcher_alt1,@mipmap/ic_launcher_alt1_fg,@color/ic_launcher_alt1_bg,@mipmap/ic_launcher_alt2,@mipmap/ic_launcher_alt2_fg,@color/ic_launcher_alt2_bg,@mipmap/ic_launcher_alt3,@mipmap/ic_launcher_alt3_fg,@color/ic_launcher_alt3_bg,@mipmap/ic_launcher_alt4,@mipmap/ic_launcher_alt4_fg,@color/ic_launcher_alt4_bg" />
+

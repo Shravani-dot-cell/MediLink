@@ -1,0 +1,17 @@
+package x;
+
+import java.nio.ByteBuffer;
+import java.nio.charset.Charset;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class b0b {
+    public static final Charset a = Charset.forName("UTF-8");
+    public static final byte[] b;
+
+    static {
+        Charset.forName("ISO-8859-1");
+        byte[] bArr = new byte[0];
+        b = bArr;
+        ByteBuffer.wrap(bArr);
+    }
+}

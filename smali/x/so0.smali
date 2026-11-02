@@ -1,0 +1,46 @@
+###### Class x.so0 (x.so0)
+.class public final Lx/so0;
+.super Ljava/lang/Object;
+.source ""
+
+# interfaces
+.implements Lx/zz;
+
+
+# static fields
+.field public static final x:Lx/so0;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 1
+
+    .line 1
+    new-instance v0, Lx/so0;
+
+    .line 2
+    .line 3
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    sput-object v0, Lx/so0;->x:Lx/so0;
+
+    .line 7
+    .line 8
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getCoroutineContext()Lx/oz;
+    .registers 2
+
+    .line 1
+    sget-object v0, Lx/dc0;->x:Lx/dc0;
+
+    .line 2
+    .line 3
+    return-object v0
+.end method

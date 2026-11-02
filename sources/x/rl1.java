@@ -1,0 +1,83 @@
+package x;
+
+import android.app.Notification;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Icon;
+import android.os.Build;
+import androidx.core.graphics.drawable.IconCompat;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class rl1 extends zl1 {
+    public IconCompat e;
+    public IconCompat f;
+    public boolean g;
+
+    public static class a {
+        public static void a(Notification.BigPictureStyle bigPictureStyle, Icon icon) {
+            bigPictureStyle.bigLargeIcon(icon);
+        }
+    }
+
+    public static class b {
+        public static void a(Notification.BigPictureStyle bigPictureStyle, Icon icon) {
+            bigPictureStyle.bigPicture(icon);
+        }
+
+        public static void b(Notification.BigPictureStyle bigPictureStyle, CharSequence charSequence) {
+            bigPictureStyle.setContentDescription(charSequence);
+        }
+
+        public static void c(Notification.BigPictureStyle bigPictureStyle, boolean z) {
+            bigPictureStyle.showBigPictureWhenCollapsed(z);
+        }
+    }
+
+    @Override // x.zl1
+    public final void b(am1 am1Var) {
+        Bitmap bitmapA;
+        Context context = am1Var.a;
+        Notification.BigPictureStyle bigContentTitle = new Notification.BigPictureStyle(am1Var.b).setBigContentTitle(this.b);
+        IconCompat iconCompat = this.e;
+        if (iconCompat != null) {
+            if (Build.VERSION.SDK_INT >= 31) {
+                b.a(bigContentTitle, iconCompat.f(context));
+            } else if (iconCompat.d() == 1) {
+                IconCompat iconCompat2 = this.e;
+                int i = iconCompat2.a;
+                if (i == -1) {
+                    Object obj = iconCompat2.b;
+                    bitmapA = obj instanceof Bitmap ? (Bitmap) obj : null;
+                } else if (i == 1) {
+                    bitmapA = (Bitmap) iconCompat2.b;
+                } else {
+                    if (i != 5) {
+                        throw new IllegalStateException("called getBitmap() on " + iconCompat2);
+                    }
+                    bitmapA = IconCompat.a((Bitmap) iconCompat2.b, true);
+                }
+                bigContentTitle = bigContentTitle.bigPicture(bitmapA);
+            }
+        }
+        if (this.g) {
+            IconCompat iconCompat3 = this.f;
+            if (iconCompat3 == null) {
+                bigContentTitle.bigLargeIcon((Bitmap) null);
+            } else {
+                a.a(bigContentTitle, iconCompat3.f(context));
+            }
+        }
+        if (this.d) {
+            bigContentTitle.setSummaryText(this.c);
+        }
+        if (Build.VERSION.SDK_INT >= 31) {
+            b.c(bigContentTitle, false);
+            b.b(bigContentTitle, null);
+        }
+    }
+
+    @Override // x.zl1
+    public final String c() {
+        return "androidx.core.app.NotificationCompat$BigPictureStyle";
+    }
+}

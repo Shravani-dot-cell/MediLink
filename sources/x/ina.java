@@ -1,0 +1,38 @@
+package x;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class ina extends dza implements m4b {
+    private static final ina zzb;
+    private int zzd;
+    private int zze;
+    private int zzf;
+    private rza zzg = eza.B;
+
+    static {
+        ina inaVar = new ina();
+        zzb = inaVar;
+        dza.l(ina.class, inaVar);
+    }
+
+    @Override // x.dza
+    public final Object f(int i) {
+        int i2 = i - 1;
+        if (i2 == 0) {
+            return (byte) 1;
+        }
+        if (i2 == 2) {
+            rl9 rl9Var = rl9.D;
+            return new l5b(zzb, "\u0004\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0001\u0000\u0001င\u0000\u0002ࠬ\u0003᠌\u0001", new Object[]{"zzd", "zze", "zzg", rl9Var, "zzf", rl9Var});
+        }
+        if (i2 == 3) {
+            return new ina();
+        }
+        if (i2 == 4) {
+            return new si8(zzb);
+        }
+        if (i2 == 5) {
+            return zzb;
+        }
+        throw null;
+    }
+}

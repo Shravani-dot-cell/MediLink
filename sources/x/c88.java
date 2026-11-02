@@ -1,0 +1,46 @@
+package x;
+
+/* JADX INFO: loaded from: classes.dex */
+public final /* synthetic */ class c88 {
+    public static final /* synthetic */ int[] a;
+    public static final /* synthetic */ int[] b;
+
+    static {
+        int[] iArr = new int[ng0.p(5).length];
+        b = iArr;
+        try {
+            iArr[1] = 1;
+        } catch (NoSuchFieldError unused) {
+        }
+        try {
+            b[2] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
+        try {
+            b[3] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
+        try {
+            b[4] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
+        int[] iArr2 = new int[b6b.values().length];
+        a = iArr2;
+        try {
+            iArr2[0] = 1;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            a[1] = 2;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            a[4] = 3;
+        } catch (NoSuchFieldError unused7) {
+        }
+        try {
+            a[3] = 4;
+        } catch (NoSuchFieldError unused8) {
+        }
+    }
+}

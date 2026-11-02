@@ -1,0 +1,29 @@
+package x;
+
+import android.hardware.display.DisplayManager;
+import android.view.Choreographer;
+
+/* JADX INFO: loaded from: classes.dex */
+public abstract class om3 implements DisplayManager.DisplayListener {
+    public final Choreographer a;
+    public final DisplayManager b;
+    public volatile long c = -9223372036854775807L;
+    public volatile long d = -9223372036854775807L;
+
+    public /* synthetic */ om3(Choreographer choreographer, DisplayManager displayManager) {
+        this.a = choreographer;
+        this.b = displayManager;
+    }
+
+    public abstract void a();
+
+    public abstract void b();
+
+    @Override // android.hardware.display.DisplayManager.DisplayListener
+    public final void onDisplayAdded(int i) {
+    }
+
+    @Override // android.hardware.display.DisplayManager.DisplayListener
+    public final void onDisplayRemoved(int i) {
+    }
+}

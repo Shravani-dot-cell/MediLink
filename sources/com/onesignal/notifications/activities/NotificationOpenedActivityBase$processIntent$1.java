@@ -1,0 +1,63 @@
+package com.onesignal.notifications.activities;
+
+import android.content.Intent;
+import com.onesignal.OneSignal;
+import com.onesignal.notifications.internal.open.INotificationOpenedProcessor;
+import kotlin.Metadata;
+import x.a51;
+import x.b00;
+import x.e50;
+import x.f42;
+import x.ji2;
+import x.jy;
+import x.rp2;
+import x.wl0;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata(d1 = {"\u0000\b\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0001\u001a\u00020\u0000H\n¢\u0006\u0004\b\u0001\u0010\u0002"}, d2 = {"Lx/rp2;", "<anonymous>", "()V"}, k = 3, mv = {2, 2, 0})
+@e50(c = "com.onesignal.notifications.activities.NotificationOpenedActivityBase$processIntent$1", f = "NotificationOpenedActivityBase.kt", l = {55}, m = "invokeSuspend")
+public final class NotificationOpenedActivityBase$processIntent$1 extends ji2 implements wl0<jy<? super rp2>, Object> {
+    Object L$0;
+    int label;
+    final /* synthetic */ NotificationOpenedActivityBase this$0;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public NotificationOpenedActivityBase$processIntent$1(NotificationOpenedActivityBase notificationOpenedActivityBase, jy<? super NotificationOpenedActivityBase$processIntent$1> jyVar) {
+        super(1, jyVar);
+        this.this$0 = notificationOpenedActivityBase;
+    }
+
+    @Override // x.lh
+    public final jy<rp2> create(jy<?> jyVar) {
+        return new NotificationOpenedActivityBase$processIntent$1(this.this$0, jyVar);
+    }
+
+    @Override // x.lh
+    public final Object invokeSuspend(Object obj) {
+        b00 b00Var = b00.f459x;
+        int i = this.label;
+        if (i == 0) {
+            f42.b(obj);
+            INotificationOpenedProcessor iNotificationOpenedProcessor = (INotificationOpenedProcessor) OneSignal.INSTANCE.getServices().getService(INotificationOpenedProcessor.class);
+            NotificationOpenedActivityBase notificationOpenedActivityBase = this.this$0;
+            Intent intent = notificationOpenedActivityBase.getIntent();
+            a51.d(intent, "getIntent(...)");
+            this.L$0 = null;
+            this.label = 1;
+            if (iNotificationOpenedProcessor.processFromContext(notificationOpenedActivityBase, intent, this) == b00Var) {
+                return b00Var;
+            }
+        } else {
+            if (i != 1) {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+            f42.b(obj);
+        }
+        return rp2.a;
+    }
+
+    @Override // x.wl0
+    public final Object invoke(jy<? super rp2> jyVar) {
+        return ((NotificationOpenedActivityBase$processIntent$1) create(jyVar)).invokeSuspend(rp2.a);
+    }
+}

@@ -1,0 +1,156 @@
+###### Class x.la3 (x.la3)
+.class public final Lx/la3;
+.super Ljava/lang/Object;
+.source ""
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
+
+
+# virtual methods
+.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .registers 9
+
+    .line 1
+    invoke-static {p1}, Lx/r62;->t(Landroid/os/Parcel;)I
+
+    .line 2
+    .line 3
+    .line 4
+    move-result v0
+
+    .line 5
+    const/4 v1, 0x0
+
+    .line 6
+    const/4 v2, 0x0
+
+    .line 7
+    move v3, v2
+
+    .line 8
+    :goto_7
+    invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v4
+
+    .line 12
+    if-ge v4, v0, :cond_32
+
+    .line 13
+    .line 14
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v4
+
+    .line 18
+    int-to-char v5, v4
+
+    .line 19
+    const/4 v6, 0x1
+
+    .line 20
+    if-eq v5, v6, :cond_2d
+
+    .line 21
+    .line 22
+    const/4 v6, 0x2
+
+    .line 23
+    if-eq v5, v6, :cond_28
+
+    .line 24
+    .line 25
+    const/4 v6, 0x3
+
+    .line 26
+    if-eq v5, v6, :cond_1f
+
+    .line 27
+    .line 28
+    invoke-static {v4, p1}, Lx/r62;->s(ILandroid/os/Parcel;)V
+
+    .line 29
+    .line 30
+    .line 31
+    goto :goto_7
+
+    .line 32
+    :cond_1f
+    sget-object v1, Landroid/content/Intent;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    .line 33
+    .line 34
+    invoke-static {p1, v4, v1}, Lx/r62;->c(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v1
+
+    .line 38
+    check-cast v1, Landroid/content/Intent;
+
+    .line 39
+    .line 40
+    goto :goto_7
+
+    .line 41
+    :cond_28
+    invoke-static {v4, p1}, Lx/r62;->n(ILandroid/os/Parcel;)I
+
+    .line 42
+    .line 43
+    .line 44
+    move-result v3
+
+    .line 45
+    goto :goto_7
+
+    .line 46
+    :cond_2d
+    invoke-static {v4, p1}, Lx/r62;->n(ILandroid/os/Parcel;)I
+
+    .line 47
+    .line 48
+    .line 49
+    move-result v2
+
+    .line 50
+    goto :goto_7
+
+    .line 51
+    :cond_32
+    invoke-static {v0, p1}, Lx/r62;->i(ILandroid/os/Parcel;)V
+
+    .line 52
+    .line 53
+    .line 54
+    new-instance p1, Lx/h93;
+
+    .line 55
+    .line 56
+    invoke-direct {p1, v2, v3, v1}, Lx/h93;-><init>(IILandroid/content/Intent;)V
+
+    .line 57
+    .line 58
+    .line 59
+    return-object p1
+.end method
+
+.method public final synthetic newArray(I)[Ljava/lang/Object;
+    .registers 2
+
+    .line 1
+    new-array p1, p1, [Lx/h93;
+
+    .line 2
+    .line 3
+    return-object p1
+.end method

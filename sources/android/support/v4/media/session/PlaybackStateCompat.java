@@ -1,0 +1,143 @@
+package android.support.v4.media.session;
+
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
+import android.text.TextUtils;
+import java.util.ArrayList;
+import x.ng0;
+
+/* JADX INFO: loaded from: classes.dex */
+@SuppressLint({"BanParcelableUsage"})
+public final class PlaybackStateCompat implements Parcelable {
+    public static final Parcelable.Creator<PlaybackStateCompat> CREATOR = new a();
+    public final float A;
+    public final long B;
+    public final int C;
+    public final CharSequence D;
+    public final long E;
+    public final ArrayList F;
+    public final long G;
+    public final Bundle H;
+
+    /* JADX INFO: renamed from: x, reason: collision with root package name */
+    public final int f9x;
+    public final long y;
+    public final long z;
+
+    public static final class CustomAction implements Parcelable {
+        public static final Parcelable.Creator<CustomAction> CREATOR = new a();
+        public final Bundle A;
+
+        /* JADX INFO: renamed from: x, reason: collision with root package name */
+        public final String f10x;
+        public final CharSequence y;
+        public final int z;
+
+        public class a implements Parcelable.Creator<CustomAction> {
+            @Override // android.os.Parcelable.Creator
+            public final CustomAction createFromParcel(Parcel parcel) {
+                return new CustomAction(parcel);
+            }
+
+            @Override // android.os.Parcelable.Creator
+            public final CustomAction[] newArray(int i) {
+                return new CustomAction[i];
+            }
+        }
+
+        public CustomAction(Parcel parcel) {
+            this.f10x = parcel.readString();
+            this.y = (CharSequence) TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(parcel);
+            this.z = parcel.readInt();
+            this.A = parcel.readBundle(MediaSessionCompat.class.getClassLoader());
+        }
+
+        @Override // android.os.Parcelable
+        public final int describeContents() {
+            return 0;
+        }
+
+        public final String toString() {
+            return "Action:mName='" + ((Object) this.y) + ", mIcon=" + this.z + ", mExtras=" + this.A;
+        }
+
+        @Override // android.os.Parcelable
+        public final void writeToParcel(Parcel parcel, int i) {
+            parcel.writeString(this.f10x);
+            TextUtils.writeToParcel(this.y, parcel, i);
+            parcel.writeInt(this.z);
+            parcel.writeBundle(this.A);
+        }
+    }
+
+    public class a implements Parcelable.Creator<PlaybackStateCompat> {
+        @Override // android.os.Parcelable.Creator
+        public final PlaybackStateCompat createFromParcel(Parcel parcel) {
+            return new PlaybackStateCompat(parcel);
+        }
+
+        @Override // android.os.Parcelable.Creator
+        public final PlaybackStateCompat[] newArray(int i) {
+            return new PlaybackStateCompat[i];
+        }
+    }
+
+    public PlaybackStateCompat(Parcel parcel) {
+        this.f9x = parcel.readInt();
+        this.y = parcel.readLong();
+        this.A = parcel.readFloat();
+        this.E = parcel.readLong();
+        this.z = parcel.readLong();
+        this.B = parcel.readLong();
+        this.D = (CharSequence) TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(parcel);
+        this.F = parcel.createTypedArrayList(CustomAction.CREATOR);
+        this.G = parcel.readLong();
+        this.H = parcel.readBundle(MediaSessionCompat.class.getClassLoader());
+        this.C = parcel.readInt();
+    }
+
+    @Override // android.os.Parcelable
+    public final int describeContents() {
+        return 0;
+    }
+
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("PlaybackState {state=");
+        sb.append(this.f9x);
+        sb.append(", position=");
+        sb.append(this.y);
+        sb.append(", buffered position=");
+        sb.append(this.z);
+        sb.append(", speed=");
+        sb.append(this.A);
+        sb.append(", updated=");
+        sb.append(this.E);
+        sb.append(", actions=");
+        sb.append(this.B);
+        sb.append(", error code=");
+        sb.append(this.C);
+        sb.append(", error message=");
+        sb.append(this.D);
+        sb.append(", custom actions=");
+        sb.append(this.F);
+        sb.append(", active item id=");
+        return ng0.i(sb, this.G, "}");
+    }
+
+    @Override // android.os.Parcelable
+    public final void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(this.f9x);
+        parcel.writeLong(this.y);
+        parcel.writeFloat(this.A);
+        parcel.writeLong(this.E);
+        parcel.writeLong(this.z);
+        parcel.writeLong(this.B);
+        TextUtils.writeToParcel(this.D, parcel, i);
+        parcel.writeTypedList(this.F);
+        parcel.writeLong(this.G);
+        parcel.writeBundle(this.H);
+        parcel.writeInt(this.C);
+    }
+}

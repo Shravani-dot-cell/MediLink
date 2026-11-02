@@ -1,0 +1,80 @@
+###### Class x.m85 (x.m85)
+.class public abstract Lx/m85;
+.super Ljava/util/AbstractMap;
+.source ""
+
+
+# instance fields
+.field public transient x:Lx/zi3;
+
+.field public transient y:Lx/g65;
+
+
+# virtual methods
+.method public final entrySet()Ljava/util/Set;
+    .registers 3
+
+    .line 1
+    iget-object v0, p0, Lx/m85;->x:Lx/zi3;
+
+    .line 2
+    .line 3
+    if-nez v0, :cond_f
+
+    .line 4
+    .line 5
+    move-object v0, p0
+
+    .line 6
+    check-cast v0, Lx/ul3;
+
+    .line 7
+    .line 8
+    new-instance v1, Lx/zi3;
+
+    .line 9
+    .line 10
+    invoke-direct {v1, v0}, Lx/zi3;-><init>(Lx/ul3;)V
+
+    .line 11
+    .line 12
+    .line 13
+    iput-object v1, p0, Lx/m85;->x:Lx/zi3;
+
+    .line 14
+    .line 15
+    return-object v1
+
+    .line 16
+    :cond_f
+    return-object v0
+.end method
+
+.method public final values()Ljava/util/Collection;
+    .registers 2
+
+    .line 1
+    iget-object v0, p0, Lx/m85;->y:Lx/g65;
+
+    .line 2
+    .line 3
+    if-nez v0, :cond_b
+
+    .line 4
+    .line 5
+    new-instance v0, Lx/g65;
+
+    .line 6
+    .line 7
+    invoke-direct {v0, p0}, Lx/g65;-><init>(Lx/m85;)V
+
+    .line 8
+    .line 9
+    .line 10
+    iput-object v0, p0, Lx/m85;->y:Lx/g65;
+
+    .line 11
+    .line 12
+    :cond_b
+    return-object v0
+.end method

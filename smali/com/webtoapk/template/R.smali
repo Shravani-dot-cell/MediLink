@@ -1,0 +1,17 @@
+###### Class com.webtoapk.template.R is created by jadx
+###### Class com.webtoapk.template.R.anim is created by jadx
+###### Class com.webtoapk.template.R.animator is created by jadx
+###### Class com.webtoapk.template.R.attr is created by jadx
+###### Class com.webtoapk.template.R.bool is created by jadx
+###### Class com.webtoapk.template.R.color is created by jadx
+###### Class com.webtoapk.template.R.dimen is created by jadx
+###### Class com.webtoapk.template.R.drawable is created by jadx
+###### Class com.webtoapk.template.R.id is created by jadx
+###### Class com.webtoapk.template.R.integer is created by jadx
+###### Class com.webtoapk.template.R.interpolator is created by jadx
+###### Class com.webtoapk.template.R.layout is created by jadx
+###### Class com.webtoapk.template.R.mipmap is created by jadx
+###### Class com.webtoapk.template.R.raw is created by jadx
+###### Class com.webtoapk.template.R.string is created by jadx
+###### Class com.webtoapk.template.R.style is created by jadx
+###### Class com.webtoapk.template.R.xml is created by jadx

@@ -1,0 +1,35 @@
+package x;
+
+import java.util.Iterator;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class py3 extends at3 {
+    public final transient b14 F;
+    public final transient vz3 G;
+
+    public py3(b14 b14Var, vz3 vz3Var) {
+        super(0);
+        this.F = b14Var;
+        this.G = vz3Var;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean contains(Object obj) {
+        return this.F.get(obj) != null;
+    }
+
+    @Override // x.kj3
+    public final int d(Object[] objArr) {
+        return this.G.d(objArr);
+    }
+
+    @Override // x.kj3, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.List
+    public final /* synthetic */ Iterator iterator() {
+        return this.G.listIterator(0);
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final int size() {
+        return this.F.C;
+    }
+}
